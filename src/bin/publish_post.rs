@@ -5,6 +5,7 @@ use self::diesel::prelude::*;
 use self::diesel_demo::*;
 use self::models::Post;
 use std::env::args;
+use uuid::Uuid;
 
 fn main() {
     use diesel_demo::schema::posts::dsl::{posts, published};
@@ -12,7 +13,7 @@ fn main() {
     let id = args()
         .nth(1)
         .expect("publish_post requires a post id")
-        .parse::<i32>()
+        .parse::<Uuid>()
         .expect("Invalid ID");
     let connection = establish_connection();
 

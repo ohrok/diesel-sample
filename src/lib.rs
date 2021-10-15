@@ -9,6 +9,7 @@ use diesel::pg::PgConnection;
 use diesel::prelude::*;
 use dotenv::dotenv;
 use std::env;
+use uuid::Uuid;
 
 pub fn establish_connection() -> PgConnection {
     dotenv().ok();
@@ -23,6 +24,7 @@ pub fn create_post<'a>(conn: &PgConnection, title: &'a str, body: &'a str) -> Po
     use schema::posts;
 
     let new_post = NewPost {
+        id: Uuid::new_v4(),
         title: title,
         body: body,
     };
