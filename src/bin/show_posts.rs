@@ -1,12 +1,12 @@
 extern crate diesel;
-extern crate diesel_demo;
+extern crate diesel_sample;
 
 use self::diesel::prelude::*;
-use self::diesel_demo::*;
+use self::diesel_sample::*;
 use self::models::*;
 
 fn main() {
-    use diesel_demo::schema::posts::dsl::*;
+    use diesel_sample::schema::posts::dsl::*;
 
     let connection = establish_connection();
     let results = posts

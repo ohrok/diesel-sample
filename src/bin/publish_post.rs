@@ -1,14 +1,14 @@
 extern crate diesel;
-extern crate diesel_demo;
+extern crate diesel_sample;
 
 use self::diesel::prelude::*;
-use self::diesel_demo::*;
+use self::diesel_sample::*;
 use self::models::Post;
 use std::env::args;
 use uuid::Uuid;
 
 fn main() {
-    use diesel_demo::schema::posts::dsl::{posts, published};
+    use diesel_sample::schema::posts::dsl::{posts, published};
 
     let id = args()
         .nth(1)

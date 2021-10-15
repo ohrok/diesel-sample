@@ -1,7 +1,7 @@
 extern crate diesel;
-extern crate diesel_demo;
+extern crate diesel_sample;
 
-use self::diesel_demo::*;
+use self::diesel_sample::*;
 use std::io::{stdin, Read};
 
 fn main() {
