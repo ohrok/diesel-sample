@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  postgres-diesel:
+    image: postgres
+    volumes:
+      - postgres-diesel-vol:/var/lib/postgresql/data
+    ports: 
+      - 5435:5432
+    restart: always
+    environment:
+      POSTGRES_DB: diesel_database
+      POSTGRES_USER: diesel_username
+      POSTGRES_PASSWORD: diesel_password
+volumes:
+  postgres-diesel-vol:
