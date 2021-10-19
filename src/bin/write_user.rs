@@ -30,10 +30,16 @@ fn main() {
         username: username,
     };
 
-    let user: User = diesel::insert_into(users::table)
+    let user: User = match diesel::insert_into(users::table)
         .values(&new_user)
         .get_result(&connection)
-        .expect("Error saving new post");
+    {
+        Ok(user) => user,
+        Err(error) => {
+            println!("Error saving new user: {}", error);
+            return;
+        }
+    };
 
-    println!("\nSaved draft {} with id {}", user.name, user.id);
+    println!("\nSaved user {} with id {}", user.name, user.id);
 }
