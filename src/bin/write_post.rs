@@ -1,6 +1,6 @@
 use diesel::*;
 use diesel_sample::*;
-use post::Post;
+use models::post::Post;
 use std::io::{stdin, Read};
 use uuid::Uuid;
 

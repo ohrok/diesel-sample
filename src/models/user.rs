@@ -1,4 +1,4 @@
-use super::schema::users;
+use super::super::schema::users;
 use uuid::Uuid;
 
 #[derive(Queryable, Insertable)]

@@ -1,4 +1,4 @@
-use super::schema::posts;
+use super::super::schema::posts;
 use uuid::Uuid;
 
 #[derive(Queryable, Insertable)]

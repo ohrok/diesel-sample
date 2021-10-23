@@ -1,7 +1,7 @@
 use diesel::*;
 use diesel_sample::*;
+use models::user::User;
 use std::io::stdin;
-use user::User;
 use uuid::Uuid;
 
 fn main() {

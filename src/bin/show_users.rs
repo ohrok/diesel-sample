@@ -1,6 +1,6 @@
 use diesel::*;
 use diesel_sample::*;
-use user::User;
+use models::user::User;
 
 fn main() {
     use diesel_sample::schema::users::dsl::*;
