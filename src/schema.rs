@@ -1,9 +1,9 @@
 table! {
     posts (id) {
         id -> Uuid,
-        title -> Varchar,
+        title -> Text,
         body -> Text,
-        published -> Bool,
+        user_id -> Uuid,
     }
 }
 
@@ -14,6 +14,8 @@ table! {
         username -> Text,
     }
 }
+
+joinable!(posts -> users (user_id));
 
 allow_tables_to_appear_in_same_query!(
     posts,
