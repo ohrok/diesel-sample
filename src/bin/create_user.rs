@@ -9,7 +9,7 @@ fn main() {
     let connection = establish_connection();
 
     // input name
-    println!("Input your name!");
+    println!("Please enter your name.");
     let name = {
         let mut s = String::new();
         stdin().read_line(&mut s).unwrap();
@@ -17,7 +17,7 @@ fn main() {
     };
 
     //  input username
-    println!("\nInput your userame!");
+    println!("\nPlease enter your userame.");
     let username = {
         let mut s = String::new();
         stdin().read_line(&mut s).unwrap();

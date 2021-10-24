@@ -25,7 +25,7 @@ fn main() {
         s.trim().to_owned()
     };
 
-    println!("\n\nInput your user id!");
+    println!("\n\nPlease enter your user id.");
     let user_id = {
         let mut s = String::new();
         stdin().read_line(&mut s).unwrap();

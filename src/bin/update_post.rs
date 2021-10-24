@@ -7,7 +7,7 @@ use uuid::Uuid;
 fn main() {
     use diesel_sample::schema::posts::dsl::{body, posts, title};
 
-    println!("Input the post id!");
+    println!("Please enter the id of the post you want to update.");
     let id = {
         let mut s = String::new();
         stdin().read_line(&mut s).unwrap();
@@ -21,7 +21,7 @@ fn main() {
         }
     };
 
-    println!("\nInput new title!");
+    println!("\nPlease enter a new title.");
     let new_title = {
         let mut s = String::new();
         stdin().read_line(&mut s).unwrap();
