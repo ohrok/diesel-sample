@@ -1,14 +1,16 @@
-extern crate diesel;
-extern crate diesel_sample;
-
-use self::diesel::prelude::*;
-use self::diesel_sample::*;
-use std::env::args;
+use diesel::prelude::*;
+use diesel_sample::*;
+use std::io::stdin;
 
 fn main() {
     use diesel_sample::schema::posts::dsl::*;
 
-    let target = args().nth(1).expect("Expected a target to match against");
+    println!("Please enter the title to be deleted.");
+    let target = {
+        let mut s = String::new();
+        stdin().read_line(&mut s).unwrap();
+        s.trim().to_owned()
+    };
     let pattern = format!("%{}%", target);
 
     let connection = establish_connection();
