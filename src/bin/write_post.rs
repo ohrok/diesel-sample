@@ -59,9 +59,3 @@ fn main() {
 
     println!("\nSaved draft {} with id {}", post.title, post.id);
 }
-
-#[cfg(not(windows))]
-const EOF: &'static str = "CTRL+D";
-
-#[cfg(windows)]
-const EOF: &'static str = "CTRL+Z";

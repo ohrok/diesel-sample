@@ -46,9 +46,3 @@ fn main() {
         .expect(&format!("Unable to find post {}", id));
     println!("\nUpdated post {}", post.title);
 }
-
-#[cfg(not(windows))]
-const EOF: &'static str = "CTRL+D";
-
-#[cfg(windows)]
-const EOF: &'static str = "CTRL+Z";
