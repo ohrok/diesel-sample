@@ -5,7 +5,7 @@ services:
     volumes:
       - postgres-diesel-vol:/var/lib/postgresql/data
     ports: 
-      - 5435:5432
+      - 5433:5432
     restart: always
     environment:
       POSTGRES_DB: diesel_database
